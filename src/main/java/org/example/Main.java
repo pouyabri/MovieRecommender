@@ -87,7 +87,7 @@ public class Main {
 //        AnswerGenerator answerGenerator = new AnswerGenerator(llmService);
 //
 //        // پیام خوشامد
-//        System.out.println("Ask me about movies! (e.g. 'Recommend movies for user 1' or 'Find me comedy movies')");
+//        System.out.println("Ask me about movies! (e.g. 'Recommend movies' or 'Find me comedy movies')");
 //
 //        // گرفتن ورودی از کاربر
 //        Scanner sc = new Scanner(System.in);
@@ -104,7 +104,7 @@ public class Main {
 //
 //        // تولید پاسخ
 //        String finalAnswer = answerGenerator.generateAnswer(userPrompt, subgraphJson);
-//        System.out.println("DeepSeek answer: " + finalAnswer);
+//        System.out.println(finalAnswer);
 //
 //        // پایان
 //        config.close();
