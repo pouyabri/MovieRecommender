@@ -100,9 +100,6 @@ public class GraphQueryService {
      * ساخت JSON از چندین Record که در یک لیست جمع شده است (مثلاً پس از چند کوئری)
      */
     private String buildJsonFromRecords(List<Record> records, String arrayName) {
-        // اگر بخواهید از بازگشت رکوردهای تکراری جلوگیری کنید،
-        // می‌توانید با استفاده از یک Set، فقط رکوردهای با movieId منحصربه‌فرد را نگه دارید.
-        // اینجا به عنوان نمونه خیلی ساده جلو می‌رویم.
 
         StringBuilder sb = new StringBuilder();
         sb.append("{\"").append(arrayName).append("\":[");
@@ -135,8 +132,7 @@ public class GraphQueryService {
      * (برای intent find_movie_by_genre، که یک کوئری واحد اجرا می‌کنیم)
      */
     private String buildJsonFromResult(Result result, String arrayName, Result originalResult) {
-        // در اینجا می‌توانیم مشابه متد بالا عمل کنیم
-        // تا در صورت اجرای یک کوئری واحد هم خروجی JSON ساخته شود.
+
         List<Record> records = new ArrayList<>();
         while (result.hasNext()) {
             records.add(result.next());
